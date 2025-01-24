@@ -94,14 +94,20 @@ $ Abra o live Server
 
 ## 🛠 Tecnologias
 
-As seguintes ferramentas foram usadas na construção do projeto:
-
--   **[HTML](https://developer.mozilla.org/pt-BR/docs/Web/HTML)**
--   **[CSS](https://developer.mozilla.org/pt-BR/docs/Web/CSS)**
-
+-   **[React](https://developer.mozilla.org/pt-BR/docs/Learn_web_development/Core/Frameworks_libraries/React_getting_started)**
 
 ---
 
+## 👨‍💻 Contribuidora 💜:)
+
+<table>
+  <tr>
+    <td align="center"><a href="https://github.com/Majucih"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/175062264?v=4" width="100px;" alt=""/><br /><sub><b>Cintia Mendes</b></sub></a><br /></td>      
+  </tr>
+  
+</table>
+
+---
 
 ## 💪 Como contribuir para o projeto
 
