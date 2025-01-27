@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 
 
@@ -75,7 +76,11 @@ const CardButton = styled.button`
   }
 `;
 
-const Cards = ({ title, icon, description, buttonText }) => {
+const Cards = ({ title, icon, description, buttonText,route }) => {
+  const navigate = useNavigate();
+  const handleClick = () => {
+    navigate(route); // Redireciona para a rota passada via props
+  };
     return (
         <CardContainer>
             <CardHeader>
@@ -85,7 +90,7 @@ const Cards = ({ title, icon, description, buttonText }) => {
             <CardBody>
                 <p>{description}</p>
             </CardBody>
-            <CardButton>{buttonText}</CardButton>
+        <CardButton onClick={handleClick}>{buttonText}</CardButton>
         </CardContainer>
     );
 }; 
