@@ -10,7 +10,7 @@ const GlobalStyle = createGlobalStyle`
 
   body {
     font-family: Arial, sans-serif;
-    background-color: #023323; /* Cor de fundo clara */
+    background-color: white;
     color: #333; /* Cor do texto */
     min-height: 100vh; /* Garante que a altura seja 100% da viewport */
     display: flex;
