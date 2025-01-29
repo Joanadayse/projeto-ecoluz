@@ -9,12 +9,20 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body {
+     margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+   margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     font-family: Arial, sans-serif;
-     background-color: #014d40 ;
-    color: - #333333; /* Cor do texto */
-    min-height: 100vh; /* Garante que a altura seja 100% da viewport */
+    min-height: 100vh; /* Garante que a página ocupe toda a altura da viewport */
     display: flex;
     flex-direction: column;
+    background-color: #002B28;
     
   }
 

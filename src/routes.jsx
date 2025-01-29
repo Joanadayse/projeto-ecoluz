@@ -1,10 +1,12 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home"
-import EMaisPage from "./pages/EMaisPage";
-import Footer from "./componets/Footer";
-import Simulador from "./pages/Simulador"
-import Conscientizacao from "./pages/Conscientizacao";
-import TradutorEtiqueta from "./pages/TradutorEtiqueta";
+import EMaisPage from "./pages/EMaisPage/EMaisPage.jsx";
+import Simulador from "./pages/Simulador/Simulador.jsx";
+import Footer from "./componets/Footer/Footer.jsx";
+import TradutorEtiqueta from "./pages/TradutorEtiquetas/TradutorEtiqueta.jsx";
+import Conscientizacao from "./pages/Concientizacao/Conscientizacao.jsx";
+
+
 
 const RoutesApp = ()=>{
     return(
@@ -14,9 +16,10 @@ const RoutesApp = ()=>{
     <Route path="/conscientizacao" element={<Conscientizacao/>} />
     <Route path="/emais" element={<EMaisPage />} />
     <Route path="/simulador" element={<Simulador/>} />  
-    <Route path="/TradutorEtiqueta" element={<TradutorEtiqueta/>} />
+    <Route path="/tradutor" element={<TradutorEtiqueta/>} />
 </Routes>
 <Footer/>
+
 </BrowserRouter>
     )
 }

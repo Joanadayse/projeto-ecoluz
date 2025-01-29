@@ -1,8 +1,6 @@
-import React from "react";
 import styled from "styled-components";
 
-
-const Container= styled.footer`
+export const Container = styled.footer`
 
   background-color: #00473E; /* Verde escuro */
   color: white;
@@ -19,13 +17,3 @@ const Container= styled.footer`
 
 
 `
-
-const Footer = () => {
-    return (
-        <Container>
-            © 2025 Eficiência Energética. Todos os direitos reservados.
-        </Container>
-    );
-};
-
-export default Footer;

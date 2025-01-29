@@ -1,9 +1,6 @@
-import React from "react";
-import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 
-
-const CardContainer = styled.div`
+export const CardContainer = styled.div`
   background-color: #C7F9CC;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -14,23 +11,26 @@ const CardContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-
+box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+ 
+  transition: box-shadow 0.3s ease-in-out; 
   &:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 8px 20px  #C7F9CC; 
   }
+
+ 
 
 
   @media (max-width: 768px) {
-    flex-direction: column; /* Coluna em telas menores */
+    flex-direction: column; 
     align-items: center;
     margin: 20px;
   }
 `;
 
 // Cabeçalho do card (com título e ícone)
- const CardHeader = styled.div`
+export const CardHeader = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -50,7 +50,7 @@ const CardContainer = styled.div`
 `;
 
 // Corpo do card (descrição)
- const CardBody = styled.div`
+export const CardBody = styled.div`
   text-align: center;
 
   p {
@@ -60,7 +60,7 @@ const CardContainer = styled.div`
 `;
 
 // Botão do card
-const CardButton = styled.button`
+export const CardButton = styled.button`
   margin-top: 20px;
   padding: 10px 20px;
   border: none;
@@ -75,24 +75,3 @@ const CardButton = styled.button`
     background-color: #2f855a;
   }
 `;
-
-const Cards = ({ title, icon, description, buttonText,route }) => {
-  const navigate = useNavigate();
-  const handleClick = () => {
-    navigate(route); // Redireciona para a rota passada via props
-  };
-    return (
-        <CardContainer>
-            <CardHeader>
-                <img src={icon} alt={title} />
-                <h2>{title}</h2>
-            </CardHeader>
-            <CardBody>
-                <p>{description}</p>
-            </CardBody>
-        <CardButton onClick={handleClick}>{buttonText}</CardButton>
-        </CardContainer>
-    );
-}; 
-
-export default Cards;

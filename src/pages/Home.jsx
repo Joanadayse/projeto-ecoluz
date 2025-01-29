@@ -1,10 +1,13 @@
 import React from "react";
-import Cards from "../componets/Cards";
-import Header from "../componets/Header";
 import lampada from "../assests/lampada.png";
 import emais from "../assests/emais.png";
 import grafico from "../assests/grafico.png";
 import etiqueta from "../assests/etiqueta.png"
+import Header from "../componets/Header/Header";
+import Cards from "../componets/Cards/Cards";
+
+
+
 
 
 const Home = () => {
@@ -18,7 +21,7 @@ const Home = () => {
             icon: lampada,
             description: "Saiba mais sobre economia de energia e sustentabilidade.",
             buttonText: "Clique aqui",
-            route: "/concientizacao"
+            route: "/conscientizacao"
         },
         {
             title: "E+ Reciclagem",
@@ -39,7 +42,7 @@ const Home = () => {
             icon: etiqueta,
             description: "Entenda as etiquetas de eficiência energética.",
             buttonText: "Clique aqui",
-            route: "/emais"
+            route: "/tradutor"
         },
     ];
 
@@ -60,6 +63,8 @@ const Home = () => {
                     />
                 ))}
             </div>
+
+          
        
        
        </>
