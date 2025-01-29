@@ -32,7 +32,7 @@ const Home = () => {
             icon: grafico,
             description: "Calcule o consumo de energia dos seus aparelhos.",
             buttonText: "Clique aqui",
-            route: "/emais"
+            route: "/simulador"
         },
         {
             title: "Tradutor de etiquetas",

@@ -11,9 +11,9 @@ const RoutesApp = ()=>{
 <BrowserRouter>
 <Routes>
     <Route path="*" element={<Home/>} />
-    <Route path="/emais" element={<EMaisPage />} />
-    <Route path="/simulador" element={<Simulador/>} />
     <Route path="/conscientizacao" element={<Conscientizacao/>} />
+    <Route path="/emais" element={<EMaisPage />} />
+    <Route path="/simulador" element={<Simulador/>} />  
     <Route path="/TradutorEtiqueta" element={<TradutorEtiqueta/>} />
 </Routes>
 <Footer/>
