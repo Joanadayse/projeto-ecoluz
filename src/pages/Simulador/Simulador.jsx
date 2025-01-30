@@ -8,11 +8,11 @@ const Simulador = () => {
   const [consumo, setConsumo] = useState("");
   const [horas, setHoras] = useState("");
   const [dias, setDias] = useState("");
+  const [tarifa, setTarifa] = useState(0.95); // Tarifa média nacional (R$/kWh)
   const [resultado, setResultado] = useState(null);
 
   const calcularConsumo = () => {
     const consumoKWh = (consumo * horas * dias) / 1000;
-    const tarifa = 0.95; // Tarifa média (R$/kWh)
     const custo = consumoKWh * tarifa;
 
     setResultado({

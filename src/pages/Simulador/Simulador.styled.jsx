@@ -6,7 +6,7 @@ export const DivForm = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-   margin-top: 90px;
+   margin-top: 60px;
 
 `;
 
@@ -64,7 +64,7 @@ export const Button = styled.button`
 `;
 
 export const Resultado = styled.div`
-  margin-top: 20px;
+  margin: 20px;
   background-color: #ffffff;
   padding: 15px;
   border-radius: 10px;
@@ -78,5 +78,24 @@ export const Resultado = styled.div`
 
   strong {
     font-weight: bold;
+  }
+`;
+
+export const Tooltip = styled.span`
+  position: relative;
+  cursor: help;
+
+  &:hover::after {
+    content: "Este é o consumo mensal do eletrodoméstico em kWh.";
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    transform: translateX(-50%);
+    background: #333;
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    white-space: nowrap;
   }
 `;
