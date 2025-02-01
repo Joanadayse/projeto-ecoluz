@@ -1,7 +1,7 @@
 
 
 <h4 align="center"> 
-	🚧  Projeto Ecoluz ♻️ em andamento  🚧
+	 Projeto Ecoluz ♻️ 
 </h4>
 
 
@@ -17,37 +17,27 @@ O Capacitech é um programa de formação em programação e IA do EQT Lab , ond
 
 ## ⚙️ Funcionalidades
 
-- [ ] Conscientização sobre o Uso de Energia:
+- [x] Conscientização sobre o Uso de Energia:
   -  Dicas Práticas:
      - Sugestões rápidas e visuais para economizar energia em casa.
-  -  Calculadora de Consumo:
-     - Estimativa de consumo e custos baseados no uso de eletrodomésticos.
    
-- [ ] Visibilidade do Programa E+ Reciclagem:
-  -  Mapa de Pontos de Coleta::
-     - Um mapa interativo mostrando locais para reciclagem.
-  -  Simulador de Economia:
-     - Estime quanto poderia economizar na conta de luz ao reciclar materiais.
+- [x] Visibilidade do Programa E+ Reciclagem:
+ 
    
-- [ ] Simulação de IoT para Monitoramento de Consumo:
+- [x] Simulação para Monitoramento de Consumo:
   -  Gráficos de Consumo:
      - Simulações baseadas no perfil de uso dos eletrodomésticos.
   -  Alertas Personalizados:
      - Recomendações para reduzir o consumo em áreas específicas.
 
-- [ ] Tradutor de Etiquetas de Eficiência Energética:
+- [x] Tradutor de Etiquetas de Eficiência Energética:
      - Explicação Simples:
       <p> O usuário insere dados da etiqueta, e o app fornece interpretações fáceis como:</p>
         -  "Comparado a outro modelo, pode economizar Y reais por ano."
         -  "Esse aparelho consome aproximadamente X reais por mês."
-     - Comparador de Aparelhos:
-        -  Ferramenta para comparar dois eletrodomésticos e destacar o mais eficiente.
      - Guia sobre a Etiqueta:
         -  Destaque visual das informações mais importantes para o consumidor.
-     
-       
- 
-   
+        
 ---
 
 ## 🎨 Layout
@@ -95,6 +85,7 @@ $ Abra o live Server
 ## 🛠 Tecnologias
 
 -   **[React](https://developer.mozilla.org/pt-BR/docs/Learn_web_development/Core/Frameworks_libraries/React_getting_started)**
+-   **[Vite](https://vite.dev/)**
 
 ---
 
