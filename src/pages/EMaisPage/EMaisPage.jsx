@@ -71,8 +71,7 @@ const EMaisPage = () => {
         </Section>
 
         <DivButton>
-          <ActionButton>Localize um ponto de coleta</ActionButton>
-          <ActionButton>Dicas de reciclagem</ActionButton>
+          <ActionButton>Localize um ponto de coleta</ActionButton>      
         </DivButton>
       </Container>
     

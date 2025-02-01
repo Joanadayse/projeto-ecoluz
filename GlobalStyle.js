@@ -23,6 +23,7 @@ const GlobalStyle = createGlobalStyle`
     display: flex;
     flex-direction: column;
     background-color: #002B28;
+    font-size: larger;
     
   }
 

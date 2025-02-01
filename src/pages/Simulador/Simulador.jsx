@@ -10,15 +10,30 @@ const Simulador = () => {
   const [dias, setDias] = useState("");
   const [tarifa, setTarifa] = useState(0.95); // Tarifa média nacional (R$/kWh)
   const [resultado, setResultado] = useState(null);
+  const [sugestao, setSugestao] = useState(""); // Nova variável para sugestões
 
   const calcularConsumo = () => {
     const consumoKWh = (consumo * horas * dias) / 1000;
     const custo = consumoKWh * tarifa;
 
+    let sugestaoTexto = "";
+
+     
+
+    // Definindo um limite alto de consumo (ajuste conforme necessário)
+    if (consumoKWh > 150) {
+      sugestaoTexto = `Seu consumo está alto!  Algumas sugestões:\n
+       Considere reduzir o uso ou trocar por um modelo mais eficiente\n
+      - Reduza o tempo de uso em  ${Math.min(horas, 1)}h por dia e economize
+      R$${(tarifa * (consumo / 1000) * Math.min(horas, 1) * dias).toFixed(2)}por mês.\n
+      - Evite deixar o aparelho em standby para reduzir o consumo.`; 
+    }
+
     setResultado({
       consumoKWh: consumoKWh.toFixed(2),
       custo: custo.toFixed(2),
     });
+    setSugestao(sugestaoTexto);
   };
 
   const limparCampos = () => {
@@ -27,6 +42,7 @@ const Simulador = () => {
     setHoras("");
     setDias("");
     setResultado(null);
+    setSugestao("");
   };
 
   return (
@@ -46,9 +62,17 @@ const Simulador = () => {
 
       <DivForm>
         <Header>
-          <span>Simule o consumo de energia </span>
-          <span> dos seus eletrodomésticos</span></Header>
+          Simule o consumo de energia 
+          dos seus eletrodomésticos</Header>
+
+       
         <Form>
+
+          <p style={{ marginBottom: "15px", textAlign: "justify" }}>
+            Primeiramente, verifique a potência do aparelho,
+            geralmente  indicada <br></br>na
+            etiqueta de especificações  ou no manual do fabricante.
+          </p>
           <Input
             type="text"
             placeholder="Tipo de Eletrodoméstico"
@@ -83,11 +107,15 @@ const Simulador = () => {
         {resultado && (
           <Resultado>
             <p>
-              Consumo total: <strong>{resultado.consumoKWh} kWh</strong>
+              Consumo total (por mês): <strong>{resultado.consumoKWh} kWh</strong>
             </p>
             <p>
-              Custo estimado: <strong>R$ {resultado.custo}</strong>
+              Custo estimado (por mês): <strong>R$ {resultado.custo}</strong>
             </p>
+
+            {sugestao && (
+              <p style={{ color: "red", fontWeight: "bold", whiteSpace: "pre-line" }}>{sugestao}</p>
+            )}
           </Resultado>
         )}
       </DivForm>

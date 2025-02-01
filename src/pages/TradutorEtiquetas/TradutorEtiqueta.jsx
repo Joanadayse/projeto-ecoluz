@@ -1,84 +1,22 @@
 import React, { useState } from 'react';
 import logoetiqueta from "../../assests/etiqueta.png";
 import HeaderPaginas from '../../componets/HeaderPaginas/HeaderPaginas';
-import { Button ,Container, ContainerFlex, ContainerImagem, Form, InfoBox, InfoIcon, InfoImage, Input,  Lupa,  Select, Table, Td, Th} from './TradutorEtiquetas.styled';
-import Tooltip from '../../componets/Tooltip/Tooltip';
-import etiquetaImagem from "../../assests/etiqueta-explicacao.jpg";
+import etiquetaImagem from "../../assests/etiqueta-explicacao.jpg"
+import { Botao,  Container,  ContainerFlex,  ContainerImagem,  DivContainer, InfoImage, Lupa, Section, Table, Td, Th } from './TradutorEtiquetas.styled';
+import { useNavigate } from 'react-router-dom';
+
 
 
 
 
 const TradutorEtiqueta = () => {
-    const [aparelho1, setAparelho1] = useState("");
-    const [aparelho2, setAparelho2] = useState("");
-    const [etiqueta1, setEtiqueta1] = useState("A");
-    const [etiqueta2, setEtiqueta2] = useState("A");
-    const [consumo1, setConsumo1] = useState("");
-    const [consumo2, setConsumo2] = useState("");
-    const [resultado, setResultado] = useState(null);
     const [lupaPos, setLupaPos] = useState({ x: 0, y: 0 });
     const [showLupa, setShowLupa] = useState(false);
 
-    const eficiencia = {
-        A: 0.8,
-        B: 1.0,
-        C: 1.2,
-        D: 1.5,
-        E: 1.8
-    };
+    const navigate = useNavigate();
 
-    // const comparar = () => {
-    //     if (!aparelho1 || !aparelho2 || !consumo1 || !consumo2) {
-    //         alert("Preencha todos os campos!");
-    //         return;
-    //     }
-
-    //     const consumoFinal1 = consumo1 * eficiencia[etiqueta1];
-    //     const consumoFinal2 = consumo2 * eficiencia[etiqueta2];
-
-    //     let sugestao = null;
-    //     if (etiqueta1 !== "A" || etiqueta2 !== "A") {
-    //         const melhorOpcao = etiqueta1 !== "A" ? aparelho1 : aparelho2;
-    //         const economia = Math.abs(consumoFinal1 - consumoFinal2) * 12; // Economia anual
-    //         sugestao = `Recomenda-se um modelo mais eficiente para ${melhorOpcao}, podendo economizar cerca de ${economia.toFixed(2)} kWh por ano!`;
-    //     }
-
-    //     setResultado({
-    //         consumoFinal1,
-    //         consumoFinal2,
-    //         sugestao
-    //     });
-
-        
-    // };
-
-    const tarifaEnergia = 0.90; // Defina a tarifa de energia em R$/kWh
-
-    const comparar = () => {
-        if (!aparelho1 || !aparelho2 || !consumo1 || !consumo2) {
-            alert("Preencha todos os campos!");
-            return;
-        }
-
-        const consumoFinal1 = consumo1 * eficiencia[etiqueta1];
-        const consumoFinal2 = consumo2 * eficiencia[etiqueta2];
-
-        // Convertendo consumo para reais
-        const custoFinal1 = consumoFinal1 * tarifaEnergia;
-        const custoFinal2 = consumoFinal2 * tarifaEnergia;
-
-        let sugestao = null;
-        if (etiqueta1 !== "A" || etiqueta2 !== "A") {
-            const melhorOpcao = etiqueta1 !== "A" ? aparelho1 : aparelho2;
-            const economia = Math.abs(custoFinal1 - custoFinal2) * 12; // Economia anual em reais
-            sugestao = `Recomenda-se um modelo mais eficiente para ${melhorOpcao}, podendo economizar cerca de R$ ${economia.toFixed(2)} por ano!`;
-        }
-
-        setResultado({
-            custoFinal1,
-            custoFinal2,
-            sugestao
-        });
+    const irParaOutraPagina = () => {
+        navigate("/simulador");
     };
 
     const handleImageClick = (e) => {
@@ -91,6 +29,7 @@ const TradutorEtiqueta = () => {
 
         setTimeout(() => setShowLupa(false), 2000); // Lupa desaparece após 2s
     };
+ 
 
 return (
     <>
@@ -107,123 +46,100 @@ return (
 
         />
         <Container>
-            
-           <ContainerFlex>
-                <InfoBox>
-                    <h2>📢 Como entender a Etiqueta de Eficiência?</h2>
-                    <p>
-                        A etiqueta classifica os aparelhos de acordo com o seu consumo de energia, indo de **A (mais eficiente)** a **D (menos eficiente)**.
-                        O nível colorido indica a faixa de consumo, mas a **letra real do seu aparelho está ao lado, destacada**.
-                    </p>
-                    <p>🔍 **Onde encontrar?** A etiqueta geralmente está visível no eletrodoméstico ou no manual.</p>
-                    <p>⚡ **Quanto menor o consumo (kWh), menor o impacto na sua conta de energia!**</p>
-                    <ContainerImagem onClick={handleImageClick}>
-                        <InfoImage src={etiquetaImagem} alt="Etiqueta de Eficiência Energética" />
-                        <Lupa
-                            show={showLupa}
-                            style={{
-                                top: `${lupaPos.y}%`,
-                                left: `${lupaPos.x}%`,
-                                backgroundPosition: `${lupaPos.x}% ${lupaPos.y}%`
-                            }}
-                        />
-                    </ContainerImagem>
-                </InfoBox>
 
+            <ContainerFlex>
+                <Section>
+                    <h2>O que é a etiqueta de eficiência energética?</h2>
+                    <p style={{ fontSize: "1rem",  textAlign: "justify", width: "80vh" }}>A etiqueta de eficiência energética é um selo que indica o consumo de energia de um eletrodoméstico. No Brasil, essa etiqueta é regulamentada pelo INMETRO e  é obrigatória para diversos produtos.</p>
+                </Section>
+
+                <ContainerImagem onClick={handleImageClick}>
+                    <InfoImage src={etiquetaImagem} alt="Etiqueta de Eficiência Energética" />
+                    <Lupa
+                        show={showLupa}
+                        style={{
+                            top: `${lupaPos.y}%`,
+                            left: `${lupaPos.x}%`,
+                            backgroundPosition: `${lupaPos.x}% ${lupaPos.y}%`
+                        }}
+                    />
+                </ContainerImagem>
+
+            </ContainerFlex>
+            
+            <DivContainer>
                 
 
-                <Form>
-                    <h1>Comparação de Eletrodomésticos</h1>
-                    {/* Aparelho 1 */}
-                    <div className='aparelho1'>
-                        <Input
-                            type="text"
-                            placeholder="Nome do 1º Eletrodoméstico"
-                            value={aparelho1}
-                            onChange={(e) => setAparelho1(e.target.value)}
-                        />
-                        <Select value={etiqueta1} onChange={(e) => setEtiqueta1(e.target.value)}>
-                            <option value="A">A - Mais eficiente</option>
-                            <option value="B">B - Eficiente</option>
-                            <option value="C">C - Médio consumo</option>
-                            <option value="D">D - Alto consumo</option>
-                            <option value="E">E - Muito alto consumo</option>
-                        </Select>
-                        <Tooltip text=" A letra ao lado do nível colorido indica a eficiência real do seu aparelho.">
-                            <InfoIcon>❓</InfoIcon>
-                        </Tooltip>
-                        <Input
-                            type="number"
-                            placeholder="Consumo (kWh)"
-                            value={consumo1}
-                            onChange={(e) => setConsumo1(e.target.value)}
-                        />
-                    </div>
+                <Section>
+                    <h2>Como interpretar a etiqueta?</h2>
+                    <ul>
+                        <li><strong>Classificação de Eficiência:</strong> A etiqueta possui uma escala que vai de **A (mais eficiente)** a **E (menos eficiente)**. Um produto classificado como A consome menos energia em comparação a um produto classificado como E.</li>
+                        <li><strong>Consumo de Energia:</strong> A etiqueta informa o consumo anual de energia em quilowatts-hora (kWh). Quanto menor esse número, melhor para o seu bolso e para o meio ambiente.</li>
+                        <li><strong>Potência do Aparelho:</strong> A etiqueta pode indicar a potência do aparelho (em Watts), que é importante para entender o consumo em tempo real. Por exemplo, um eletrodoméstico de 1000W consome 1 kWh se utilizado por 1 hora.</li>
+                        <li><strong>Informações Adicionais:</strong> A etiqueta também indica qual é o tipo de produto (geladeira, ar-condicionado, máquina de lavar, etc.). <br></br> Algumas etiquetas trazem uma comparação de eficiência com modelos semelhantes.</li>
+                    </ul>
+                </Section>
 
-                    {/* Aparelho 2 */}
-                    <div className='aparelho1'>
-                        <Input
-                            type="text"
-                            placeholder="Nome do 2º Eletrodoméstico"
-                            value={aparelho2}
-                            onChange={(e) => setAparelho2(e.target.value)}
-                        />
-                        <Select value={etiqueta2} onChange={(e) => setEtiqueta2(e.target.value)}>
-                            <option value="A">A - Mais eficiente</option>
-                            <option value="B">B - Eficiente</option>
-                            <option value="C">C - Médio consumo</option>
-                            <option value="D">D - Alto consumo</option>
-                            <option value="E">E - Muito alto consumo</option>
-                        </Select>
-                        <Tooltip text="Informe o consumo médio em kWh.">
-                            <InfoIcon>❓</InfoIcon>
-                        </Tooltip>
-                        <Input
-                            type="number"
-                            placeholder="Consumo (kWh)"
-                            value={consumo2}
-                            onChange={(e) => setConsumo2(e.target.value)}
-                        />
-                    </div>
+                <Section>
+                    <h2>Como calcular o gasto de energia ?</h2>
+                    <ul>
+                        <li>Primeiramente, verifique a potência do aparelho, geralmente indicada na etiqueta de especificações.Vamos usar como exemplo a geladeira;</li>
+                        <li>Estime o tempo médio diário que a geladeira fica ligada, multiplique a potência pela quantidade de horas diárias e, depois, pelo número de dias no mês.</li>
+                        <li>Por exemplo, vamos considerar uma geladeira de 100 watts (0,1 kW) que fica ligada 24 horas por dia. O cálculo será:</li>
+                        <p style={{ marginLeft:"150px" }}><strong>0,1 kW × 24 horas × 30 dias = 72 kWh por mês</strong> </p>
+                        <li>Para calcular o custo, <strong>multiplique o consumo mensal (em kWh) pelo valor da tarifa de energia elétrica da sua região</strong>. Assim, você terá uma estimativa do impacto financeiro que o funcionamento da geladeira representa na sua conta de luz.</li>
 
-                    <Button onClick={comparar}>Comparar</Button>
+                        <Botao onClick={irParaOutraPagina} >
+                                        Simule o seu consumo de Energia
+                                    </Botao>
 
+                        <h3>A idade da geladeira influencia no consumo?</h3>
+                        <p>
+                            Sim, a idade da geladeira pode influenciar significativamente no consumo de energia.
+                            De maneira simplificada, geladeiras mais antigas tendem a ser menos eficientes em termos energéticos devido à tecnologia e aos materiais utilizados na época da sua fabricação.
+                            Modelos mais novos, por outro lado, geralmente apresentam avanços em eficiência energética, como motores mais eficientes e isolamento térmico melhorado, o que resulta em um consumo de energia menor.</p>
+                    </ul>
+                </Section>
 
-                    {resultado && (
-                        <div className='resultado'>
-                            
-                            <Table>
-                                <thead>
-                                    <tr>
-                                        <Th>Eletrodoméstico</Th>
-                                        <Th>
-                                            Consumo Mensal (kWh) 
-                                        </Th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <Td>{aparelho1}</Td>
-                                        <Td>R$ {resultado.custoFinal1.toFixed(2)}</Td>
-                                    </tr>
-                                    <tr>
-                                        <Td>{aparelho2}</Td>
-                                        <Td>R$ {resultado.custoFinal2.toFixed(2)}</Td>
-                                    </tr>
-                                </tbody>
-                            </Table>
+                <Section>
+                    <h2>Potência média por eletrodoméstico</h2>
 
-                            {resultado.sugestao && (
-                                <p style={{ marginTop: "20px", color: "#00a87e", fontWeight: "bold" }}>
-                                    {resultado.sugestao}
-                                </p>
-                            )}
-                        </div>
-                    )}
-                </Form>
+                    <Table>
+                        <thead>
+                            <tr>
+                                <Th>Eletrodoméstico</Th>
+                                <Th>Potência Média (W)</Th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <Td>Geladeira</Td>
+                                <Td>100-400 W</Td>
+                            </tr>
+                            <tr>
+                                <Td>TV</Td>
+                                <Td>50-200 W</Td>
+                            </tr>
+                            <tr>
+                                <Td>Ar-condicionado</Td>
+                                <Td>900-3000 W</Td>
+                            </tr>
+                            <tr>
+                                <Td>Micro-ondas</Td>
+                                <Td>1000-1500 W</Td>
+                            </tr>
+                            <tr>
+                                <Td>Máquina de Lavar</Td>
+                                <Td>500-1500 W</Td>
+                            </tr>
+                           
+                        </tbody>
+                    </Table>
+                  
+                </Section>
+            </DivContainer>
 
-               
-            </ContainerFlex>
+            
         </Container>
     </>
 );

@@ -8,17 +8,35 @@ export const DivForm = styled.div`
   justify-content: center;
    margin-top: 60px;
 
+     p{
+    color: white;
+  }
+
+  
+  @media (max-width: 768px) {
+    margin: 40px;
+    
+  }
+
 `;
 
 export const Header = styled.h1`
-  font-size: 2rem;
   color: white;
   margin-bottom: 20px;
   text-align: center;
+   width: 600px; 
+   overflow-wrap: break-word;
 
-  display: flex;
-  flex-direction: column; /* Cada <span> vira uma linha */
-  text-align: center;
+ @media (max-width: 768px) {
+    width: 350px; 
+   overflow-wrap: break-word;
+  font-size: 1.8rem;
+
+
+    
+  }
+
+
 `;
 
 export const Form = styled.div`

@@ -13,11 +13,9 @@ const Header = () => {
             </HeaderLogo>
             <Nav >
                 <a href="#" >
-                    Quem somos
+                   Contato  (98) 2055-0116
                 </a>
-                <a href="#">
-                    Contato
-                </a>
+                
             </Nav>
         </Cabecalho>
     );

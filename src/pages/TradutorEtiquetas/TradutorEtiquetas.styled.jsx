@@ -5,38 +5,90 @@ export const Container = styled.div`
   padding: 50px;
   max-width: 1200px;
   margin: auto;
-`;
-
-export const Title = styled.h1`
-  text-align: center;
-  margin-bottom: 20px;
-`;
-
-/* Flexbox para organizar InfoBox e Form lado a lado */
-export const ContainerFlex = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 20px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 
   @media (max-width: 768px) {
-    flex-direction: column; /* Ajusta para colunas em telas menores */
-    align-items: center;
+    padding: 20px;
   }
 `;
 
-
-export const Input = styled.input`
-  padding: 10px;
-  font-size: 1rem;
+export const DivContainer = styled.div`
   width: 100%;
-  max-width: 300px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+`;
+
+export const Header = styled.header`
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+
+  @media (max-width: 768px) {
+    font-size: 20px;
+  }
+`;
+
+export const Section = styled.section`
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  color: white;
+  line-height: 1.8;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+
+  @media (max-width: 768px) {
+    padding: 15px;
+    font-size: 14px;
+  }
+`;
+
+export const SubTitle = styled.h2`
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 10px;
+
+  @media (max-width: 768px) {
+    font-size: 18px;
+  }
+`;
+
+export const Text = styled.p`
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+
+  @media (max-width: 768px) {
+    font-size: 14px;
+  }
+`;
+
+export const Image = styled.img`
+  width: 100%;
+  max-width: 400px;
+  display: block;
+  margin: 10px auto;
+  border-radius: 8px;
 `;
 
 export const Table = styled.table`
   width: 100%;
   border-collapse: collapse;
   margin-top: 20px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+
+  @media (max-width: 768px) {
+    font-size: 14px;
+  }
 `;
 
 export const Th = styled.th`
@@ -44,41 +96,42 @@ export const Th = styled.th`
   color: #fff;
   padding: 10px;
   border: 1px solid #ddd;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 `;
 
 export const Td = styled.td`
   padding: 10px;
   border: 1px solid #ddd;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 `;
 
-export const Button = styled.button`
-  padding: 10px 20px;
-  background-color: #00a87e;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  font-size: 1rem;
-  cursor: pointer;
-
-  &:hover {
-    background-color: #007a5a;
+export const TableRow = styled.tr`
+  &:nth-child(even) {
+    background: #f2f2f2;
   }
 `;
-/* Caixa com explicação da etiqueta */
-export const InfoBox = styled.div`
- 
-  color: #eafaf1;
-  padding: 20px;
-  border-radius: 8px;
-  flex: 1;
-  max-width: 50%;
 
-  p{
- line-height: 1.5
+export const Botao = styled.button`
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  background: #008c4a;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.3s;
+  margin: 20px;
+
+  &:hover {
+    background: #00b060;
   }
 
   @media (max-width: 768px) {
-    max-width: 100%;
+    font-size: 0.9rem;
+    padding: 8px 16px;
   }
 `;
 
@@ -97,7 +150,6 @@ export const InfoImage = styled.img`
   border-radius: 5px;
 `;
 
-/* Estilo da Lupa */
 export const Lupa = styled.div`
   position: absolute;
   width: 100px;
@@ -106,45 +158,19 @@ export const Lupa = styled.div`
   background-size: 300% 300%;
   border: 2px solid #fff;
   border-radius: 50%;
-  pointer-events: none; /* Evita interferência no clique */
+  pointer-events: none;
   transform: translate(-50%, -50%);
-  display: ${(props) => (props.show ? "block" : "none")}; /* Controla a visibilidade */
+  display: ${(props) => (props.show ? "block" : "none")};
 `;
 
-
-/* Estilo do formulário */
-export const Form = styled.div`
-  background-color: #f4f4f4;
-  margin: 40px;
-  padding: 20px;
-  border-radius: 8px;
-  flex: 1;
-  max-width: 45%;
-  text-align: center;
-  
-
-  .aparelho1{
-    margin: 10px;
-  }
-
-  .resultado{
-    margin-top: 20px;
-  }
+export const ContainerFlex = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
 
   @media (max-width: 768px) {
-    max-width: 100%;
+    flex-direction: column;
+    align-items: center;
   }
-`;
-
-export const Select = styled.select`
-  padding: 10px;
-  font-size: 1rem;
-  width: 100%;
-  max-width: 300px;
-`;
-
-export const InfoIcon = styled.span`
-  margin-left: 5px;
-  font-size: 1rem;
-  cursor: pointer;
 `;
