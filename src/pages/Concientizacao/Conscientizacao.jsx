@@ -29,7 +29,7 @@ return (
                 { href: "/emais", label: "E+ RECICLAGEM" },
                 { href: "/simulador", label: "SIMULADOR" },
                 { href: "/tradutor", label: "TRADUTOR DE ETIQUETAS" },
-                { href: "*", label: "INICIO" },
+                { href: "/", label: "INICIO" },
             ]}
 
 

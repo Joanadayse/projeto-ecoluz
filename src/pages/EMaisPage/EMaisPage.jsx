@@ -20,7 +20,7 @@ const EMaisPage = () => {
           { href: "/conscientizacao", label: "CONCIENTIZAÇÃO" },
           { href: "/simulador", label: "SIMULADOR" },
           { href: "/tradutor", label: "TRADUTOR DE ETIQUETAS" },
-          { href: "*", label: "INICIO" },
+          { href: "/", label: "INICIO" },
         ]}
     
     

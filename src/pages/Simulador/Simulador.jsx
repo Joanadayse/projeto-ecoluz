@@ -54,7 +54,7 @@ const Simulador = () => {
           { href: "/conscientizacao", label: "CONCIENTIZAÇÃO" },
           { href: "/emais", label: "E+ RECICLAGEM" },
           { href: "/tradutor", label: "TRADUTOR DE ETIQUETAS" },
-          { href: "*", label: "INICIO" },
+          { href: "/", label: "INICIO" },
         ]}
 
 

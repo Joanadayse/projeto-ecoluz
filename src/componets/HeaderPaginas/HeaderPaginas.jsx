@@ -14,9 +14,7 @@ const HeaderPaginas = ({ logo, title, subtitle, links }) => {
             <SubTitle>{subtitle}</SubTitle>
             <Nav>
                 {links.map((link, index) => (
-                    <NavLink key={index} 
-                        to={link.href}
-                    >
+                    <NavLink key={index} to={link.href}>
                         {link.label}
                     </NavLink>
                 ))}
