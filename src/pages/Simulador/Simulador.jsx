@@ -51,10 +51,10 @@ const Simulador = () => {
         logo={logosimulador}
         title="SIMULADOR"
         links={[
-          { href: "conscientizacao", label: "CONCIENTIZAÇÃO" },
-          { href: "emais", label: "E+ RECICLAGEM" },
-          { href: "tradutor", label: "TRADUTOR DE ETIQUETAS" },
-          { href: "", label: "INICIO" },
+          { href: "/conscientizacao", label: "CONCIENTIZAÇÃO" },
+          { href: "/emais", label: "E+ RECICLAGEM" },
+          { href: "/tradutor", label: "TRADUTOR DE ETIQUETAS" },
+          { href: "*", label: "INICIO" },
         ]}
 
 
