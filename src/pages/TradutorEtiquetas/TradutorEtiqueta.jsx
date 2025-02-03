@@ -37,10 +37,10 @@ return (
             logo={logoetiqueta}
             title="TRADUTOR DE ETIQUETA"
             links={[
-              { href: "/conscientizacao", label: "CONCIENTIZAÇÃO" },
-                { href: "/emais", label: "E+ RECICLAGEM" },
-                { href: "/simulador", label: "SIMULADOR" },
-                { href: "*", label: "INICIO" },
+                { href: "conscientizacao", label: "CONCIENTIZAÇÃO" },
+                { href: "emais", label: "E+ RECICLAGEM" },
+                { href: "simulador", label: "SIMULADOR" },
+                { href: "", label: "INICIO" },
             ]}
 
 

@@ -17,10 +17,10 @@ const EMaisPage = () => {
         title="E+ RECICLAGEM"
         subtitle="Transforme recicláveis em economia na sua conta de energia"
         links={[
-          { href: "/conscientizacao", label: "CONCIENTIZAÇÃO" },
-          { href: "/simulador", label: "SIMULADOR" },
-          { href: "/tradutor", label: "TRADUTOR DE ETIQUETAS" },
-          { href: "*", label: "INICIO" },
+          { href: "conscientizacao", label: "CONCIENTIZAÇÃO" },
+          { href: "simulador", label: "SIMULADOR" },
+          { href: "tradutor", label: "TRADUTOR DE ETIQUETAS" },
+          { href: "", label: "INICIO" },
         ]}
     
     

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const HeaderContainer = styled.header`
@@ -73,7 +74,7 @@ export const Nav = styled.nav`
   }
 `;
 
-export const NavLink = styled.a`
+export const NavLink = styled(Link)`
   color: #C7F9CC;
   margin: 0 10px;
   text-decoration: none;
