@@ -2,24 +2,20 @@ import styled from "styled-components";
 import etiquetaImagem from "../../assests/etiqueta-explicacao.jpg"
 
 export const Container = styled.div`
-  padding: 50px;
-  max-width: 1200px;
-  margin: auto;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
 
-  @media (max-width: 768px) {
-    padding: 20px;
-  }
+    display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  max-width: 100%;
+  padding: 50px;
 `;
 
 export const DivContainer = styled.div`
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
+
+
+   width: 100%;
+  max-width: 100%;
 `;
 
 export const Header = styled.header`
@@ -42,12 +38,37 @@ export const Section = styled.section`
   line-height: 1.8;
   word-wrap: break-word;
   overflow-wrap: break-word;
+  word-break: break-word;
+
+  p, ul, li {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    white-space: normal;
+    max-width: 100%;
+  }
 
   @media (max-width: 768px) {
     padding: 15px;
     font-size: 14px;
   }
 `;
+
+// export const Section = styled.section`
+//   padding: 20px;
+//   border-radius: 8px;
+//   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+//   margin-bottom: 20px;
+//   color: white;
+//   line-height: 1.8;
+//   word-wrap: break-word;
+//   overflow-wrap: break-word;
+
+//   @media (max-width: 768px) {
+//     padding: 15px;
+//     font-size: 14px;
+//   }
+// `;
 
 export const SubTitle = styled.h2`
   font-size: 20px;

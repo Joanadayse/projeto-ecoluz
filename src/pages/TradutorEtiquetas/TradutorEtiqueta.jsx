@@ -50,7 +50,7 @@ return (
             <ContainerFlex>
                 <Section>
                     <h2>O que é a etiqueta de eficiência energética?</h2>
-                    <p style={{ fontSize: "1rem",  textAlign: "justify", width: "80vh" }}>A etiqueta de eficiência energética é um selo que indica o consumo de energia de um eletrodoméstico. No Brasil, essa etiqueta é regulamentada pelo INMETRO e  é obrigatória para diversos produtos.</p>
+                    <p style={{ fontSize: "1rem", textAlign: "justify", maxWidth: "100%" }}>A etiqueta de eficiência energética é um selo que indica o consumo de energia de um eletrodoméstico. No Brasil, essa etiqueta é regulamentada pelo INMETRO e  é obrigatória para diversos produtos.</p>
                 </Section>
 
                 <ContainerImagem onClick={handleImageClick}>
