@@ -10,6 +10,12 @@ import { ActionButton, Container, DivButton, List, Material, Materials, Note, Se
 
 
 const EMaisPage = () => {
+
+  
+    const abrirMapa = () => {
+      window.open('https://www.google.com/maps/d/u/0/edit?mid=1GS5_F7mBGJiBlXAwn7PgMKn_weMudD8&usp=sharing', '_blank');
+    };
+
   return (
     <>
     <HeaderPaginas
@@ -71,7 +77,7 @@ const EMaisPage = () => {
         </Section>
 
         <DivButton>
-          <ActionButton>Localize um ponto de coleta</ActionButton>      
+          <ActionButton onClick={abrirMapa}>Localize um ponto de coleta</ActionButton>      
         </DivButton>
       </Container>
     

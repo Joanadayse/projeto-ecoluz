@@ -54,21 +54,7 @@ export const Section = styled.section`
   }
 `;
 
-// export const Section = styled.section`
-//   padding: 20px;
-//   border-radius: 8px;
-//   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-//   margin-bottom: 20px;
-//   color: white;
-//   line-height: 1.8;
-//   word-wrap: break-word;
-//   overflow-wrap: break-word;
 
-//   @media (max-width: 768px) {
-//     padding: 15px;
-//     font-size: 14px;
-//   }
-// `;
 
 export const SubTitle = styled.h2`
   font-size: 20px;
