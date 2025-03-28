@@ -1,8 +1,8 @@
 
 
-<h4 align="center"> 
+<h1 align="center"> 
 	 Projeto Ecoluz ♻️ 
-</h4>
+</h1>
 
 
 
