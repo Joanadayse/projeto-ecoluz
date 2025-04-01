@@ -48,12 +48,9 @@ O layout da aplicação está disponível no Figma:
   <img alt="Made by tgmarinho" src="https://img.shields.io/badge/Acessar%20Layout%20-Figma-%2304D361">
 </a>
 
-
-### Mobile
-
-
-
 ### Web
+## 🌐 Demonstração
+[![Live Demo](https://img.shields.io/badge/Demo-Acessar%20App-2ea44f?style=for-the-badge&logo=vercel)](https://joanadayse.github.io/projeto-ecoluz/)
 
 
 
